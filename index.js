@@ -818,8 +818,8 @@ init();
 composer = addPostProcessing();
 animate();
 const newScrollingText = document.querySelector('.scrolling-text');
-newScrollingText.textContent = "瑞雪迎春兆丰年，千家万户笑开颜。\n" +
-  "财源滚滚增福寿，喜气洋洋满大千。\n" +
-  "花放千枝添富贵，门迎四季纳平安。\n" +
-  "新年吉庆人欢乐，福照乾坤共团圆。";
-setTimeout(() => toggleRadio(),3000 )
+newScrollingText.textContent = "春风开瑞景，万物展新颜。\n" +
+  "爆竹迎佳节，桃符映彩笺。\n" +
+  "年丰人共乐，日暖福相连。\n" +
+  "岁岁皆如意，和谐庆永年。";
+setTimeout(() => toggleRadio(), 3000)
