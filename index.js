@@ -696,14 +696,14 @@ function toggleRadio() {
     });
   }
   if (!audioPlayer) {
-    radioButton.textContent = '关闭广播';
+    radioButton.textContent = '关闭电台';
     addScrollingTextEffect();
     audioPlayer = new Audio('https://nightride.fm/stream/nightride.m4a');
     audioPlayer.addEventListener('playing', () => {
       updateNowPlaying();
     });
     audioPlayer.addEventListener('pause', () => {
-      radioButton.textContent = '启动广播';
+      radioButton.textContent = '启动电台';
       scrollingContainer.style.opacity = '0';
     });
     audioPlayer.addEventListener('error', () => {
@@ -714,11 +714,11 @@ function toggleRadio() {
     if (audioPlayer.paused) {
       audioPlayer.play().catch(err => {
       });
-      radioButton.textContent = '关闭广播';
+      radioButton.textContent = '关闭电台';
       scrollingContainer.style.opacity = '1';
     } else {
       audioPlayer.pause();
-      radioButton.textContent = '启动广播';
+      radioButton.textContent = '启动电台';
       scrollingContainer.style.opacity = '0';
     }
   }
@@ -822,4 +822,3 @@ newScrollingText.textContent = "春风开瑞景，万物展新颜。\n" +
   "爆竹迎佳节，桃符映彩笺。\n" +
   "年丰人共乐，日暖福相连。\n" +
   "岁岁皆如意，和谐庆永年。";
-setTimeout(() => toggleRadio(), 3000)
