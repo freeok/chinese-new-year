@@ -202,6 +202,7 @@ function createCity() {
     }
     return null;
   }
+
   const buildingConfigs = [{
     geometry: buildingGeometries.large,
     count: 40
@@ -632,6 +633,7 @@ function createSun() {
     flare
   };
 }
+
 async function updateNowPlaying() {
   try {
     const response = await fetch('https://nightride.fm/api/now-playing');
@@ -668,6 +670,7 @@ function addScrollingTextEffect() {
     scrollingText.style.setProperty('--scroll-offset', scrollOffset);
     requestAnimationFrame(updateScroll);
   }
+
   updateScroll();
   scrollingText.addEventListener('animationend', () => {
     scrollingText.style.animation = 'none';
@@ -692,14 +695,14 @@ function toggleRadio() {
     });
   }
   if (!audioPlayer) {
-    radioButton.textContent = 'STOP RADIO';
+    radioButton.textContent = '关闭广播';
     addScrollingTextEffect();
     audioPlayer = new Audio('https://nightride.fm/stream/nightride.m4a');
     audioPlayer.addEventListener('playing', () => {
       updateNowPlaying();
     });
     audioPlayer.addEventListener('pause', () => {
-      radioButton.textContent = 'START RADIO';
+      radioButton.textContent = '启动广播';
       scrollingContainer.style.opacity = '0';
     });
     audioPlayer.addEventListener('error', () => {
@@ -710,15 +713,16 @@ function toggleRadio() {
     if (audioPlayer.paused) {
       audioPlayer.play().catch(err => {
       });
-      radioButton.textContent = 'STOP RADIO';
+      radioButton.textContent = '关闭广播';
       scrollingContainer.style.opacity = '1';
     } else {
       audioPlayer.pause();
-      radioButton.textContent = 'START RADIO';
+      radioButton.textContent = '启动广播';
       scrollingContainer.style.opacity = '0';
     }
   }
 }
+
 const isMobile = navigator.userAgent;
 
 function adjustQualitySettings() {
@@ -734,6 +738,7 @@ function adjustQualitySettings() {
     }
   }
 }
+
 window.addEventListener('resize', onWindowResize, false);
 window.addEventListener('orientationchange', onWindowResize, false);
 
@@ -807,6 +812,7 @@ function updateFireworks(deltaTime) {
     }
   });
 }
+
 init();
 composer = addPostProcessing();
 animate();
