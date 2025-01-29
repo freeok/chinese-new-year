@@ -663,7 +663,7 @@ function addScrollingTextEffect() {
   scrollingContainer.style.opacity = '1';
   scrollingText.style.animation = 'none';
   scrollingText.offsetHeight;
-  scrollingText.style.animation = 'scrollText 30s linear infinite, neonFlicker 2s infinite';
+  scrollingText.style.animation = 'scrollText 60s linear infinite, neonFlicker 2s infinite';
 
   function updateScroll() {
     scrollOffset += 0.01;
