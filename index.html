@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href=".">
+  <title>HAPPY NEW YEAR 2025</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="scanlines"></div>
+<div class="scanline"></div>
+<div class="title">2025 新年快乐！</div>
+<div class="grid-overlay"></div>
+<div class="loading">LOADING RETROWAVE CITY...</div>
+<div id="retrowaveCity"></div>
+<div class="stats">
+  FPS: <span id="fps">0</span><br>
+  坐标: <span id="position">0, 0, 0</span>
+</div>
+<div class="scrolling-container">
+  <div class="scrolling-text"></div>
+</div>
+<div class="happy-new-year">HAPPY NEW YEAR 2025</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/RGBShiftShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/HueSaturationShader.js"></script>
+<script src="index.js"></script>
+
+<div class="code-by">CODE by PC</div>
+<button onclick="toggleRadio()" class="radio-button">START RADIO</button>
+<div class="now-playing" id="nowPlaying">欢迎访问 Nightride.FM</div>
+</body>
+
+</html>
