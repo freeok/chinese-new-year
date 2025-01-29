@@ -689,6 +689,7 @@ function toggleRadio() {
     scrollingText.style.transform = 'translateX(100vw)';
     void scrollingText.offsetWidth;
   }
+  // 浏览器全屏
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen().catch(err => {
       console.log('Fullscreen error:', err);
@@ -821,3 +822,4 @@ newScrollingText.textContent = "瑞雪迎春兆丰年，千家万户笑开颜。
   "财源滚滚增福寿，喜气洋洋满大千。\n" +
   "花放千枝添富贵，门迎四季纳平安。\n" +
   "新年吉庆人欢乐，福照乾坤共团圆。";
+setTimeout(() => toggleRadio(),3000 )
